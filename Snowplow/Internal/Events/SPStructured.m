@@ -67,6 +67,7 @@ SP_BUILDER_METHOD(NSString *, label)
 SP_BUILDER_METHOD(NSString *, property)
 SP_BUILDER_METHOD(NSNumber *, value)
 SP_BUILDER_METHOD(NSString *, pageUrl)
+SP_BUILDER_METHOD(NSString *, referrer)
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-implementations"
@@ -107,6 +108,7 @@ SP_BUILDER_METHOD(NSString *, pageUrl)
     [payload setValue:_property forKey:kSPStuctProperty];
     if (_value) [payload setObject:[NSString stringWithFormat:@"%.17g", [_value doubleValue]] forKey:kSPStuctValue];
     if (_pageUrl) [payload setValue:_pageUrl forKey:kSPPageUrl];
+    if (_referrer) [payload setValue:_referrer forKey:kSPPageRefr];
     return payload;
 }
 

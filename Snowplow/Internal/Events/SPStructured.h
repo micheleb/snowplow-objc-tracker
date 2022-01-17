@@ -80,6 +80,7 @@ NS_SWIFT_NAME(Structured)
 @property (nonatomic, nullable) NSString *property;
 @property (nonatomic, nullable) NSNumber *value;
 @property (nonatomic, nullable) NSString *pageUrl;
+@property (nonatomic, nullable) NSString *referrer;
 
 + (instancetype)build:(void(^)(id<SPStructuredBuilder> builder))buildBlock __deprecated_msg("Use initializer instead.");
 
@@ -91,6 +92,7 @@ SP_BUILDER_DECLARE_NULLABLE(NSString *, label)
 SP_BUILDER_DECLARE_NULLABLE(NSString *, property)
 SP_BUILDER_DECLARE_NULLABLE(NSNumber *, value)
 SP_BUILDER_DECLARE_NULLABLE(NSString *, pageUrl)
+SP_BUILDER_DECLARE_NULLABLE(NSString *, referrer)
 
 @end
 
